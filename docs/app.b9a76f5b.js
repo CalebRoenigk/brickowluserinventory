@@ -126,7 +126,13 @@ fetch('https://api.brickowl.com/v1/collection/lots', {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': 'https://calebroenigk.github.io/',
     'Access-Control-Allow-Credentials': 'true'
-  }
+  },
+  mode: 'cors',
+  // no-cors, *cors, same-origin
+  cache: 'no-cache',
+  // *default, no-cache, reload, force-cache, only-if-cached
+  credentials: 'same-origin' // include, *same-origin, omit
+
 }).then(function (response) {
   return response.json();
 }).then(function (data) {
@@ -136,4 +142,4 @@ fetch('https://api.brickowl.com/v1/collection/lots', {
 });
 console.log("hello!");
 },{}]},{},["i5Wi"], null)
-//# sourceMappingURL=app.963af681.js.map
+//# sourceMappingURL=app.b9a76f5b.js.map
