@@ -118,6 +118,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"i5Wi":[function(require,module,exports) {
-
+fetch('https://api.brickowl.com/v1/collection/lots', {
+  method: 'GET',
+  headers: {
+    'X-API-KEY': '948bbe714d0d2fa46aa5ef278825e8f7ab831ac6d510467254dd19786670d386',
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': 'http://localhost:1234',
+    'Access-Control-Allow-Credentials': 'true'
+  }
+}).then(function (response) {
+  return response.json();
+}).then(function (data) {
+  // Work with JSON data here
+  console.log(data);
+}).catch(function (err) {// Do something for an error here
+});
 },{}]},{},["i5Wi"], null)
-//# sourceMappingURL=app.5b4a3a14.js.map
+//# sourceMappingURL=app.f34699fa.js.map
