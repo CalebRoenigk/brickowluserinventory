@@ -8,9 +8,7 @@ fetch('https://api.brickowl.com/v1/collection/lots',
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': 'https://calebroenigk.github.io/',
       'Access-Control-Allow-Credentials': 'true'
-  },
-  mode: 'no-cors'
-
+  }
 })
   .then((response) => {
     return response.json()
